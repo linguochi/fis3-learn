@@ -21,7 +21,22 @@ fis.match('/less/**.less', {
         "browsers": ["last 2 versions"]
     })
 });
-
+fis.match('*.css',{
+    useSprite:true
+});
+/**
+ * css雪碧图支持
+ * 启用打包插件，必须匹配 ::package
+ * 分配到 useSprite: true 的 CSS 文件才会被处理
+ */
+fis.match('::package', {
+    packager: fis.plugin('map'),
+    spriter: fis.plugin('csssprites', {
+        layout: 'matrix',
+        margin: '15',
+        htmlUseSprite:true // 内联样式使用css雪碧图
+    })
+});
 
 /** 配置环境**/
 fis.media('prod')
