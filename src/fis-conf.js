@@ -10,8 +10,18 @@ fis.match('/views/(**)', {
 //解析下less
 fis.match('/less/**.less', {
     parser: fis.plugin('less'),
-    rExt: '.css'
+    rExt: '.css',
+    /**
+     * 使用postCss
+     * 不推荐:https://www.npmjs.com/package/fis3-postprocessor-autoprefixer
+     * 推荐使用:fis3-preprocessor-autoprefixer (虽然名字很怪异)
+     * 浏览器配置参考: https://github.com/ai/browserslist#queries
+     */
+    preprocessor: fis.plugin("autoprefixer", {
+        "browsers": ["last 2 versions"]
+    })
 });
+
 
 /** 配置环境**/
 fis.media('prod')
