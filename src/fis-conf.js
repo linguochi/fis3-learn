@@ -8,7 +8,7 @@ fis.match('/views/(**)', {
     release:'/static/$1'
 });
 //解析下les s
-fis.match('/less/styles.less',{
+fis.match('/less/**.less',{
     parser: fis.plugin('less'),
     rExt: '.css'
 });
