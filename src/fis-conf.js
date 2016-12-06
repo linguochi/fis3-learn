@@ -90,7 +90,9 @@ fis.match('::package', {
 //     packOrder: -10
 // });
 //更简洁的打包顺序
-
+fis.match('*.js', {
+    release: '/static/$0'
+});
 fis.match('::package', {
     packager: fis.plugin('map', {
         '/combine/pkg.js': [
@@ -99,7 +101,12 @@ fis.match('::package', {
         ]
     })
 });
-
+// //更粗暴的打包
+// fis.match('::package', {
+//     postpackager: fis.plugin('loader', {
+//         allInOne: true
+//     })
+// });
 /**
  * 本地发布
  */
