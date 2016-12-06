@@ -98,6 +98,7 @@ var DEFAULT_SETTINGS = {
 fis.match(selector,props); 
 ```
  - `selector`:选择器，语法参考 [glob](http://fis.baidu.com/fis3/docs/api/config-glob.html)
+ 
 > `*` 匹配0或多个除了 / 以外的字符
 `?` 匹配单个 **除了** ` / `以外的字符
 `**` 匹配多个字符**包括**` /`
