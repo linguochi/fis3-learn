@@ -1,3 +1,8 @@
+/**
+ * 全局配置
+ */
+fis.set('project.files',['/less/**']); //筛选需要fis处理的文件
+
 /** 配置产出 **/
 //所有的文件产出到 static/ 目录下
 fis.match('*', {
@@ -21,8 +26,8 @@ fis.match('/less/**.less', {
         "browsers": ["last 2 versions"]
     })
 });
-fis.match('*.css',{
-    useSprite:true
+fis.match('*.css', {
+    useSprite: true
 });
 /**
  * css雪碧图支持
@@ -34,7 +39,7 @@ fis.match('::package', {
     spriter: fis.plugin('csssprites', {
         layout: 'matrix',
         margin: '15',
-        htmlUseSprite:true // 内联样式使用css雪碧图
+        htmlUseSprite: true // 内联样式使用css雪碧图
     })
 });
 
