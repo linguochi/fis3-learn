@@ -1,19 +1,14 @@
 ### 安装
  1. 首先安装`NodeJS`
  2. 安装`fis3`
- 
 ```shell
 npm install -g fis3
 ```
-
-3. 查看是否安装成功:
-
+ 3. 查看是否安装成功:
 ```shell
 fis3 -v
 ```
-
-4. 升级
-
+ 4. 升级
 ```shell
 npm update -g fis3
 ```
