@@ -39,6 +39,7 @@ fis3 server open
 
 ### 全局配置
 > [参考](http://fis.baidu.com/fis3/docs/api/config-props.html)
+
 ```js
 var DEFAULT_SETTINGS = {
   project: {
@@ -60,6 +61,7 @@ var DEFAULT_SETTINGS = {
   options: {}
 };
 ```
+
 ### 文件属性
 | 属性     |  描述    | 示例    |
 | :------------- | :------------- | :------------- |
@@ -87,6 +89,7 @@ var DEFAULT_SETTINGS = {
 | isJsLike     | 指定对文件进行 js 相关语言能力处理，值类型：bool     |     |
 | isCssLike     | 指定对文件进行 css 相关语言能力处理，值类型：bool     |     |
 | isHtmlLike     | 指定对文件进行 html 相关语言能力处理，值类型：string     |     |
+
 ### 资源定位
 >  把资源的相对路径在发布之后变换为绝对路径（部署路径）
 
