@@ -100,6 +100,15 @@ fis.match('::package', {
     })
 });
 
+/**
+ * 本地发布
+ */
+fis.match('*', {
+    deploy: fis.plugin('local-deliver', {
+        to: '../dist/'
+    })
+});
+
 /** 配置环境**/
 fis.media('prod')
     .match('*.{less,css}', {
