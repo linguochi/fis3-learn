@@ -1,14 +1,19 @@
 ### 安装
  1. 首先安装`NodeJS`
  2. 安装`fis3`
+ 
 ```shell
 npm install -g fis3
 ```
+
 3. 查看是否安装成功:
+
 ```shell
 fis3 -v
 ```
+
 4. 升级
+
 ```shell
 npm update -g fis3
 ```
@@ -20,15 +25,18 @@ npm update -g fis3
 [官方案例](https://github.com/fex-team/fis3/blob/dev/doc/demo/demo-simple.tar.gz)
 在根目录下有一个`fis-conf.js`的配置文件，通常该文件所在的目录即是项目的根目录;
 构建: 
+
 ``` shell
 fis3 release -d ./output
 ```
 
 ### 内置服务器
 打开内置服务器根目录
+
 ```shell 
 fis3 server open 
 ```
+
 ### 全局配置
 > [参考](http://fis.baidu.com/fis3/docs/api/config-props.html)
 ```js
@@ -39,21 +47,16 @@ var DEFAULT_SETTINGS = {
     md5Connector: '_',    //设置md5与文件的连接字符，@param: string
     files: ['**'],    //设置项目源码文件过滤器，@param:
     ignore: ['node_modules/**', 'output/**', '.git/**', 'fis-conf.js']    //排除某些不处理的文件
-  },
-
-    // project的属性也可以通过 fis.set('project.charset', 'utf8') 来设置，其它的类似
-
+  },    // project的属性也可以通过 fis.set('project.charset', 'utf8') 来设置，其它的类似
   component: {
     skipRoadmapCheck: true,  
     protocol: 'github',
     author: 'fis-components'
   },
-
   modules: {
     hook: 'components',
     packager: 'map'
   },
-
   options: {}
 };
 ```
